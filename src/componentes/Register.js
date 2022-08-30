@@ -89,6 +89,7 @@ render(){
                         <input type="text" name="txt" placeholder="User name" ref={this.nameRef}></input>
                         <input type="email" name="email" placeholder="Email" ref={this.emailRef}></input>
                         <input type="password" name="pswd" placeholder="Password" ref={this.passRef}></input>
+                        <a href="/blog/registrar">Registrar</a>
                         <button>Login</button>
                     </form> 
     
@@ -125,15 +126,6 @@ export default Register;
 // 					<input type="email" name="email" placeholder="Email" required="">
 // 					<input type="password" name="pswd" placeholder="Password" required="">
 // 					<button>Sign up</button>
-// 				</form>
-// 			</div>
-
-// 			<div class="login">
-// 				<form>
-// 					<label for="chk" aria-hidden="true">Login</label>
-// 					<input type="email" name="email" placeholder="Email" required="">
-// 					<input type="password" name="pswd" placeholder="Password" required="">
-// 					<button>Login</button>
 // 				</form>
 // 			</div>
 // 	</div>

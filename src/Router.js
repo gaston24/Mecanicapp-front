@@ -14,6 +14,7 @@ import CreatedArticle from "./componentes/CreatedArticle";
 
 import EditarArticle from "./componentes/EditarArticle";
 import Register from "./componentes/Register";
+import Registrar from "./componentes/Registrar";
 
 class Router extends Component {
     render() {
@@ -36,6 +37,7 @@ class Router extends Component {
                 <Route exact path='/redirect/:search' element={<Params />} />
                 {/* <Route exact path='/blog/busqueda/:search' element={<Search />} /> */}
 
+                <Route exact path='/blog/registrar' element={<Registrar />} />
 
                 <Route exact path='/formulario' element={<Formulario />} />
                 <Route exact path='/peliculas' element={<Peliculas />} />
