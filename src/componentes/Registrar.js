@@ -51,7 +51,7 @@ class Registrar extends Component {
             <form onSubmit={this.registerUser}>
             <label htmlFor="chk" aria-hidden="true">Sign up</label>
             <input type="text" name="txt" placeholder="User name" required=""  ref={this.nameRef}></input>
-            <input type="email" name="email" placeholder="Email" required="" ref={this.emailRef}></input>
+            {/* <input type="email" name="email" placeholder="Email" required="" ref={this.emailRef}></input> */}
             <input type="password" name="pswd" placeholder="Password" required="" ref={this.passRef}></input>
          	<button>Registrar</button>
          	</form>

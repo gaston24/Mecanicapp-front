@@ -21,13 +21,10 @@ function App() {
   return (
     <div className="App">
 
-      <Header />
-
       {/* <Peliculas  /> */}
       <Router />
       <div className='clearfix'></div>
 
-      <Footer />
     </div>
 
 

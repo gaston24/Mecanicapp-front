@@ -10,74 +10,20 @@ import Header from "./Header";
 class Register extends Component {
     urle = Global.url
      nameRef = React.createRef();
-    //  emailRef = React.createRef();
+     emailRef = React.createRef();
      passRef = React.createRef()
      state = {
         token:null,
         status:"failed"
        
     }
-    saveArticle = (e) => {
-        e.preventDefault()
-    
-    const date =
-            {
-                name:this.nameRef.current.value,
-                password:this.passRef.current.value
-            }
-        
+
            
-        const config = {
-            method: 'post',
-            url: this.urle+'login',
-            data:date
-        }
-
-        const headers = {
-            "Content-Type": "application/json",
-            // Authorization: apiKey,
-          };
-          const url = this.urle+'login';
-        
-        //   axios.get(url, { headers });
-        axios(config,{ headers })
-        .then(res=>{
-            console.log("res", res)
-            if(res.data.data.token){
-                this.setState({
-                    token:res.data.data.token,
-                    typeUser:res.data.typeUser,
-                    status: 'succes'
-                })
-
-            // Opción 1 ->  localStorage.setItem(name, content)
-            // Opción 2 ->localStorage.name = content
-            // name = nombre del elemento
-            // content = Contenido del elemento
-
-            localStorage.setItem('token', res.data.data.token)
-            localStorage.setItem('userLevel', res.data.typeUser)
-           
-         
-                
-            }else{
-                console.log("false")
-                this.setState({
-                    token :  null,
-                    status: 'fail'
-                });
-            }
-        })
-    
-        
-    } 
-    
 render(){
-    console.log(this.state.typeUser);
+   
     if(this.state.status === "succes"){
-
-        return <Home token ={this.state.token} user={this.state.typeUser}/>
-
+        return <Home token ={this.state.token}/>
+     
     }
 
   
@@ -88,8 +34,8 @@ render(){
        
                      <form onSubmit={this.saveArticle}>
                         <label htmlFor="subheader" aria-hidden="true">Login</label>
-                        <input type="text" name="txt" placeholder="User name" ref={this.nameRef}></input>
-                        {/* <input type="email" name="email" placeholder="Email" ref={this.emailRef}></input> */}
+                        {/* <input type="text" name="txt" placeholder="User name" ref={this.nameRef}></input> */}
+                        <input type="text" name="name" placeholder="name" ref={this.emailRef}></input>
                         <input type="password" name="pswd" placeholder="Password" ref={this.passRef}></input>
                         <a href="/blog/registrar">Registrar</a>
                         <button>Login</button>
